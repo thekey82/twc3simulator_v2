@@ -11,14 +11,14 @@ I use this as a workaround to get evcc working with the mobile charger, as evcc 
 
 ## requirements
 
-- Tasmota outlet to grep the current from. - Something like https://amzn.eu/d/3biI2E2
+- Tasmota outlet to grep the current from. - Something like 
 
 
 ## Installation
 
 via docker:
 
-    docker run --name twc3simulator -p 80:80 -e TASMOTA_IP=10.10.10.10 laenglea/twc3simulator
+    docker run --name twc3simulator_v2 -p 80:80 -e SHELLY_IP=10.10.10.10 thekey82/twc3simulator_v2
 
 where TASMOTA_IP ist the ip of the tasmota device where the current information should come from.
 
@@ -26,10 +26,10 @@ or as part of your evcc so you could access it via port 80 without exposint this
 
     services:
     twc3sim:
-      container_name: twc3sim
-      image: laenglea/twc3simulator
+      container_name: twc3simv2
+      image: thekey82/twc3simulator_v2
       environment:
-        - "TASMOTA_IP=172.16.90.72"
+        - "SHELLY_IP=192.168.178.205"
       restart: unless-stopped
       
 full example in the example folder
@@ -39,12 +39,12 @@ for tweaking:
 
 first clone it to the machine you want to run it
 
-    git clone https://github.com/laenglea/twc3simulator.git
+    git clone https://github.com/thekey82/twc3simulator_v2.git
 
 
 ## set the correct ip of your tasmota device
 
-    cd twc3simulator
+    cd twc3simulator_v2
     
 for this edit the script and set the proper ip address
 
