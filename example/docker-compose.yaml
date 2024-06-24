@@ -4,7 +4,7 @@ services:
     container_name: twc3simv2
     image: thekey82/twc3simulator_v2
     environment:
-      - "SHELLY_IO=192.268.278.205"
+      - "SHELLY_IP=192.268.278.205"
     restart: unless-stopped
 
   evcc:
