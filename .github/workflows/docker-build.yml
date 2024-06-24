@@ -23,5 +23,5 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         push: true
-        tags: laenglea/twc3simulator:latest
+        tags: thekey82/twc3simulator_v2:latest
 
