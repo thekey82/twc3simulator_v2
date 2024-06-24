@@ -1,10 +1,10 @@
 version: "3"
 services:
   twc3sim:
-    container_name: twc3sim
-    image: laenglea/twc3simulator
+    container_name: twc3simv2
+    image: thekey82/twc3simulator_v2
     environment:
-      - "TASMOTA_IP=172.16.90.72"
+      - "SHELLY_IO=192.268.278.205"
     restart: unless-stopped
 
   evcc:
