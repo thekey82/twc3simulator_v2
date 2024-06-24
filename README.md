@@ -1,8 +1,8 @@
-# twc3simulator (Tesla Wall Box 3 Simulator)
+# twc3simulator_v2 (Tesla Wall Box 3 Simulator)
 
 This program simulates the API output of a Tesla Wallbox 3.
 
-It basically just fakes the output while using information from a Tasmota device to fill the current.
+It basically just fakes the output while using information from a Shelly 1pm device to fill the current.
 
 ![](media/api.png)
 
@@ -11,7 +11,7 @@ I use this as a workaround to get evcc working with the mobile charger, as evcc 
 
 ## requirements
 
-- Tasmota outlet to grep the current from. - Something like 
+- Shelly 1pm outlet to grep the current from. - Something like https://amzn.eu/d/0alZo2Gv
 
 
 ## Installation
