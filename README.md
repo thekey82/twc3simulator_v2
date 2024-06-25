@@ -8,7 +8,7 @@ Es fälscht im Grunde nur die Ausgabe, während es Informationen von einem Shell
 
 ![](media/api.png)
 
-I use this as a workaround to get evcc working with the mobile charger, as evcc requires a proper charger. The twc3 template is special because it lets evcc use Tesla's own api to start/stop and adjust the current level. 
+Ich benutze dies als Workaround, um evcc mit dem mobilen Ladegerät arbeiten zu lassen, da evcc ein richtiges Ladegerät benötigt. Die twc3-Vorlage ist etwas Besonderes, weil sie evcc die eigene API von Tesla verwenden lässt, um das aktuelle Niveau zu starten/zu stoppen und anzupassen.
 
 
 ## requirements
