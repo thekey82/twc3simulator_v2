@@ -59,7 +59,7 @@ def get_shelly_connected(shelly_ip):
         response = requests.get(url)
         response.raise_for_status()
         data = response.json()
-        if data["output"] == True:
+        if data["switch:0"]["output"] == True:
             power = True
         else:
             power = False
