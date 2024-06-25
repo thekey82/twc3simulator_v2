@@ -1,8 +1,10 @@
 # twc3simulator_v2 (Tesla Wall Box 3 Simulator)
 
-This program simulates the API output of a Tesla Wallbox 3.
+Achtung Beta Version -> Funktion noch nicht gegeben!
 
-It basically just fakes the output while using information from a Shelly 1pm device to fill the current.
+Dieses Programm simuliert die API-Ausgabe einer Tesla Wallbox 3.
+
+Es fälscht im Grunde nur die Ausgabe, während es Informationen von einem Shelly 1pm-Gerät verwendet, um den Strom zu füllen.
 
 ![](media/api.png)
 
