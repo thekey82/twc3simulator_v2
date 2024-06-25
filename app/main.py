@@ -5,7 +5,7 @@ import os
 
 app = FastAPI()
 
-shelly_ip = os.getenv('SHELLY_IP', '192.168.178.205')
+shelly_ip = os.getenv('shelly_ip', '192.168.178.205')
 
 # Define the data structure
 class Vitals(BaseModel):
@@ -47,7 +47,7 @@ def get_shelly_current(shelly_ip):
         response = requests.get(url)
         response.raise_for_status()
         data = response.json()
-        return data["switch:0"]["current"]["voltage"]
+        return data["current"]["voltage"]
     except requests.RequestException as e:
         raise ValueError(f"Error fetching data from Shelly device: {e}")
 
