@@ -1,6 +1,6 @@
 # twc3simulator_v2 (Tesla Wall Box 3 Simulator)
 
-Achtung Beta Version -> Funktion noch nicht gegeben!
+Achtung Beta Version 
 
 Dieses Programm simuliert die API-Ausgabe einer Tesla Wallbox 3.
 
