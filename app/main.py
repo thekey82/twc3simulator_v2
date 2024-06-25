@@ -91,7 +91,7 @@ async def get_vitals():
         currentB_a=0.0,
         currentC_a=0.0,
         currentN_a=0.0,
-        voltageA_v=voltage,
+        voltageA_v=242.5,
         voltageB_v=0.0,
         voltageC_v=0.0,
         relay_coil_v=11.9,
