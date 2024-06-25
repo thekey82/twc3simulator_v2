@@ -22,7 +22,7 @@ via docker:
 
     docker run --name twc3simulator_v2 -p 80:80 -e SHELLY_IP=10.10.10.10 thekey82/twc3simulator_v2
 
-where TASMOTA_IP ist the ip of the tasmota device where the current information should come from.
+where SHELLY_IP ist the ip of the tasmota device where the current information should come from.
 
 or as part of your evcc so you could access it via port 80 without exposint this port at all just with the name of the container 
 
