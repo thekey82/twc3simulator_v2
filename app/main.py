@@ -40,8 +40,6 @@ class Vitals(BaseModel):
 def get_shelly_current(shelly_ip):
     url = f"http://{shelly_ip}/rpc/Shelly.GetStatus"
 
-    #{"StatusSNS":{"Time":"1970-01-01T17:54:20","ANALOG":{"Temperature":15.0},"ENERGY":{"TotalStartTime":"1970-01-01T00:00:00","Total":2.361,"Yesterday":0.000,"Today":2.361,"Power":2,"ApparentPower":13,"ReactivePower":12,"Factor":0.17,"Voltage":225,"Current":0.056},"TempUnit":"C"}}
-
     #{"ble":{},"cloud":{"connected":true},"input:0":{"id":0,"state":false},"mqtt":{"connected":false},"switch:0":{"id":0, "source":"HTTP_in", "output":false, "apower":0.0, "voltage":248.8, "current":0.000, "aenergy":{"total":7840.485,"by_minute":[0.000,0.000,0.000],"minute_ts":1719228000},"temperature":{"tC":57.9, "tF":136.2}},"sys":{"mac":"B0B21C102CC4","restart_required":false,"time":"13:20","unixtime":1719228008,"uptime":36301,"ram_size":261564,"ram_free":122896,"fs_size":458752,"fs_free":139264,"cfg_rev":11,"kvs_rev":0,"schedule_rev":1,"webhook_rev":0,"available_updates":{},"reset_reason":3},"wifi":{"sta_ip":"192.168.178.205","status":"got ip","ssid":"Garage","rssi":-37},"ws":{"connected":false}}
     try:
         response = requests.get(url)
@@ -52,9 +50,7 @@ def get_shelly_current(shelly_ip):
         raise ValueError(f"Error fetching data from Shelly device: {e}")
 
 def get_shelly_connected(shelly_ip):
-    #url = f"http://{tasmota_ip}/cm?cmnd=status%200"
     url = f"http://{shelly_ip}/rpc/Shelly.GetStatus"
-    #{"Status":{'Module': 46, 'DeviceName': 'tm_gangOG', 'FriendlyName': [''], 'Topic': 'tasmota_12C771', 'ButtonTopic': '0', 'Power': 1, 'PowerOnState': 3, 'LedState': 1, 'LedMask': 'FFFF', 'SaveData': 1, 'SaveState': 1, 'SwitchTopic': '0', 'SwitchMode': [3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 'ButtonRetain': 0, 'SwitchRetain': 0, 'SensorRetain': 0, 'PowerRetain': 0, 'InfoRetain': 0, 'StateRetain': 0, 'StatusRetain': 0}
     try:
         response = requests.get(url)
         response.raise_for_status()
