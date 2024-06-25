@@ -1,4 +1,5 @@
-# twc3simulator_v2 (Tesla Wall Box 3 Simulator)
+twc3simulator_v2 (Tesla Wall Box 3 Simulator) für EVCC 
+(auch für HomeAssistent Addon)
 
 Achtung Beta Version 
 
