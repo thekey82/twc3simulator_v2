@@ -30,7 +30,7 @@ Ich benutze dies als Workaround, um evcc mit dem mobilen Ladegerät arbeiten zu 
 
 via docker:
 
-    docker run --name twc3simulator_v2 -p 80:80 -e SHELLY_IP=10.10.10.10 thekey82/twc3simulator_v2
+    docker run --name twc3simulator_v2 -p 80:80 -e SHELLY_IP=192.168.178.205 thekey82/twc3simulator_v2
 
 Wobei SHELLY_IP die IP des Shelly-Geräts ist, von dem die aktuellen Informationen stammen sollten.
 
