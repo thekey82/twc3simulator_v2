@@ -5,7 +5,7 @@ import os
 
 app = FastAPI()
 
-shelly_ip = os.getenv('shelly_ip', '192.168.178.205')
+shelly_ip = os.getenv('shelly_ip', '192.168.178.59')
 
 # Define the data structure
 class Vitals(BaseModel):
