@@ -6,7 +6,7 @@ twc3simulator_v2 (Tesla Wall Box 3 Simulator) für EVCC
    - Ladestrom und Ladespannung werden von einem Shelly 1pm abgefragt und simuliert
      
   in Arbeit:
-   - Anzwige der geladenen Wh des Ladevorganges   
+   - Anzeige der geladenen Wh des Ladevorganges   
 
 
 Dieses Programm simuliert die API-Ausgabe einer Tesla Wallbox 3.
