@@ -32,9 +32,9 @@ via docker:
 
     docker run --name twc3simulator_v2 -p 80:80 -e SHELLY_IP=10.10.10.10 thekey82/twc3simulator_v2
 
-where SHELLY_IP ist the ip of the tasmota device where the current information should come from.
+Wobei SHELLY_IP die IP des Shelly-Geräts ist, von dem die aktuellen Informationen stammen sollten.
 
-or as part of your evcc so you could access it via port 80 without exposint this port at all just with the name of the container 
+Oder als Teil Ihres evcc, so dass Sie über Port 80 darauf zugreifen können.
 
     services:
     twc3sim:
@@ -44,29 +44,29 @@ or as part of your evcc so you could access it via port 80 without exposint this
         - "SHELLY_IP=192.168.178.205"
       restart: unless-stopped
       
-full example in the example folder
+Vollständiges Beispiel im Beispielordner
 
 
 for tweaking:
 
-first clone it to the machine you want to run it
+Klonen Sie es zuerst auf die Maschine, auf der Sie es ausführen möchten
 
     git clone https://github.com/thekey82/twc3simulator_v2.git
 
 
-## set the correct ip of your tasmota device
+## Stellen Sie die richtige IP Ihres Shelly-Geräts ein
 
     cd twc3simulator_v2
     
-for this edit the script and set the proper ip address
+Bearbeiten Sie dafür das Skript und legen Sie die richtige IP-Adresse fest
 
     vim app/main.py
 
-or set the IP as Envirnment var.
+Oder setzen Sie die IP als Envirnment "var".
     
 ## run it
 
-to run it native you have to first install the requirements with pip or your package manager
+Um es nativ auszuführen, müssen Sie zuerst die Anforderungen mit pip oder Ihrem Paketmanager installieren
 
 native:
 
@@ -76,6 +76,6 @@ native:
    
 ## validate
 
-if it's running properly you should get something back when looking at
+Wenn es richtig läuft, sollten Sie etwas zurückbekommen, wenn Sie es sich ansehen
 
 http://<ip>/api/1/vitals
