@@ -1,7 +1,12 @@
 twc3simulator_v2 (Tesla Wall Box 3 Simulator) für EVCC 
 (auch für HomeAssistent Addon)
 
-Achtung Beta Version 
+ Version: 0.2
+  26.06.2024
+   - Ladestrom und Ladespannung werden von einem Shelly 1pm abgefragt und simuliert
+  in Arbeit:
+   - geladene Wh des Ladevorganges   
+
 
 Dieses Programm simuliert die API-Ausgabe einer Tesla Wallbox 3.
 
