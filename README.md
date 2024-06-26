@@ -13,6 +13,7 @@ Dieses Programm simuliert die API-Ausgabe einer Tesla Wallbox 3.
 
 Es fälscht im Grunde nur die Ausgabe, während es Informationen von einem Shelly 1pm-Gerät verwendet, um den Strom zu füllen.
 
+![](media/evcc.png)
 ![](media/api.png)
 
 Ich benutze dies als Workaround, um evcc mit dem mobilen Ladegerät arbeiten zu lassen, da evcc ein richtiges Ladegerät benötigt. Die twc3-Vorlage ist etwas Besonderes, weil sie evcc die eigene API von Tesla verwenden lässt, um das aktuelle Niveau zu starten/zu stoppen und anzupassen.
