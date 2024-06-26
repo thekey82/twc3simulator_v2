@@ -6,7 +6,8 @@ import os
 app = FastAPI()
 
 shelly_ip = os.getenv('shelly_ip', '192.168.178.59')
-
+wh = float()
+wh_neu = float()
 # Define the data structure
 class Vitals(BaseModel):
     contactor_closed: bool
@@ -49,6 +50,16 @@ def get_shelly_current(shelly_ip):
     except requests.RequestException as e:
         raise ValueError(f"Error fetching data from Shelly device: {e}")
 
+#def get_shelly_total(shelly_ip)
+     #url = f"http://{shelly_ip}/rpc/Shelly.GetStatus"
+     #try:
+         #response = requests.get(url)
+         #response.raise_for_status()
+         #data = response.json()
+         #return data["aenergy"]["total"]
+    #except requests.RequestException as e:
+        #raise ValueError(f"Error fetching data from Shelly device: {e}")
+
 def get_shelly_voltage(shelly_ip):
     url = f"http://{shelly_ip}/rpc/Shelly.GetStatus"
     try:
@@ -90,6 +101,13 @@ async def get_vitals():
         voltage = get_shelly_voltage(shelly_ip)
     except ValueError as e:
         return {"error": str(e)}    
+        
+    #try:
+        #if wh == 0.0
+             #wh = total
+    #try:
+        #session_energy_wh = total - wh
+        
     vitals = Vitals(
         contactor_closed=charging,
         vehicle_connected=connected,
