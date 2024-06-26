@@ -51,8 +51,6 @@ def get_shelly_current(shelly_ip):
 
 def get_shelly_voltage(shelly_ip):
     url = f"http://{shelly_ip}/rpc/Shelly.GetStatus"
-
-    #{"ble":{},"cloud":{"connected":true},"input:0":{"id":0,"state":false},"mqtt":{"connected":false},"switch:0":{"id":0, "source":"HTTP_in", "output":false, "apower":0.0, "voltage":248.8, "current":0.000, "aenergy":{"total":7840.485,"by_minute":[0.000,0.000,0.000],"minute_ts":1719228000},"temperature":{"tC":57.9, "tF":136.2}},"sys":{"mac":"B0B21C102CC4","restart_required":false,"time":"13:20","unixtime":1719228008,"uptime":36301,"ram_size":261564,"ram_free":122896,"fs_size":458752,"fs_free":139264,"cfg_rev":11,"kvs_rev":0,"schedule_rev":1,"webhook_rev":0,"available_updates":{},"reset_reason":3},"wifi":{"sta_ip":"192.168.178.205","status":"got ip","ssid":"Garage","rssi":-37},"ws":{"connected":false}}
     try:
         response = requests.get(url)
         response.raise_for_status()
