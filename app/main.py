@@ -4,6 +4,8 @@ import requests
 import os
 
 app = FastAPI()
+wh = 0
+wh_neu = 0
 
 shelly_ip = os.getenv('shelly_ip', '192.168.178.59')
 # Define the data structure
@@ -84,13 +86,22 @@ def get_shelly_connected(shelly_ip):
 @app.get("/api/1/vitals")
 async def get_vitals():
     try:
+        total = get_shelly_total(shelly_ip)
+    except ValueError as e:
+        return {"error": str(e)} 
+    if session_energy_wh == 0.000:
+        wh = total
+    
+    try:
         current = get_shelly_current(shelly_ip)
     except ValueError as e:
         return {"error": str(e)}
     if current <= 4.5:
         charging = False
+        wh_neu = True
     else:
         charging = True
+        session_energy_wh = total - wh
     try:
         connected = get_shelly_connected(shelly_ip)
     except ValueError as e:
