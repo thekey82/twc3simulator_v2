@@ -5,7 +5,7 @@ import os
 
 app = FastAPI()
 wh = 0
-wh_neu = 0
+wh_neu = False
 
 shelly_ip = os.getenv('shelly_ip', '192.168.178.59')
 # Define the data structure
