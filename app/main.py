@@ -50,7 +50,7 @@ def get_shelly_current(shelly_ip):
     except requests.RequestException as e:
         raise ValueError(f"Error fetching data from Shelly device: {e}")
 
-def get_shelly_total(shelly_ip)
+def get_shelly_total(shelly_ip):
     url = f"http://{shelly_ip}/rpc/Shelly.GetStatus"
     try:
         response = requests.get(url)
