@@ -107,13 +107,16 @@ async def get_vitals():
              #wh = total
              #session_energy_wh = 0.00
     #try:
+        #if (cargeing == True and wh_neu == True)
+            #session_energy_wh = 0
         
     #try:
-        #if charging == true
+        #if charging == True
             #session_energy_wh = total - wh
+            #wh_neu = False
             
         #else:
-              #wh_neu = true
+              #wh_neu = True
     vitals = Vitals(
         contactor_closed=charging,
         vehicle_connected=connected,
