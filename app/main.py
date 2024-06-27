@@ -99,6 +99,10 @@ async def get_vitals():
     except ValueError as e:
         return {"error": str(e)}
     try:
+        total = get_shelly_total(shelly_ip)
+    except ValueError as e:
+        return {"error": str(e)}    
+    try:
         voltage = get_shelly_voltage(shelly_ip)
     except ValueError as e:
         return {"error": str(e)}    
