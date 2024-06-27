@@ -50,15 +50,15 @@ def get_shelly_current(shelly_ip):
     except requests.RequestException as e:
         raise ValueError(f"Error fetching data from Shelly device: {e}")
 
-#def get_shelly_total(shelly_ip)
-     #url = f"http://{shelly_ip}/rpc/Shelly.GetStatus"
-     #try:
-         #response = requests.get(url)
-         #response.raise_for_status()
-         #data = response.json()
-         #return data["aenergy"]["total"]
-    #except requests.RequestException as e:
-        #raise ValueError(f"Error fetching data from Shelly device: {e}")
+def get_shelly_total(shelly_ip)
+     url = f"http://{shelly_ip}/rpc/Shelly.GetStatus"
+     try:
+         response = requests.get(url)
+         response.raise_for_status()
+         data = response.json()
+         return data["aenergy"]["total"]
+    except requests.RequestException as e:
+        raise ValueError(f"Error fetching data from Shelly device: {e}")
 
 def get_shelly_voltage(shelly_ip):
     url = f"http://{shelly_ip}/rpc/Shelly.GetStatus"
@@ -102,21 +102,21 @@ async def get_vitals():
     except ValueError as e:
         return {"error": str(e)}    
         
-    #try:
-        #if wh == 0.0
-             #wh = total
-             #session_energy_wh = 0.00
-    #try:
-        #if (cargeing == True and wh_neu == True)
-            #session_energy_wh = 0
+    try:
+        if wh == 0.0
+             wh = total
+             session_energy_wh = 0.00
+    try:
+        if (cargeing == True and wh_neu == True)
+            session_energy_wh = 0
         
-    #try:
-        #if charging == True
-            #session_energy_wh = total - wh
-            #wh_neu = False
+    try:
+        if charging == True
+            session_energy_wh = total - wh
+            wh_neu = False
             
-        #else:
-              #wh_neu = True
+        else:
+              wh_neu = True
     vitals = Vitals(
         contactor_closed=charging,
         vehicle_connected=connected,
