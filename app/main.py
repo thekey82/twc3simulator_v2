@@ -102,10 +102,9 @@ async def get_vitals():
     except ValueError as e:
         return {"error": str(e)}    
         
-    try:
-        if wh == 0.0:
-            wh = get_shelly_total(shelly_ip)
-            session_energy_wh = 0.00
+     if wh == 0.0:
+         wh = get_shelly_total(shelly_ip)
+          session_energy_wh = 0.00
     #try:
         #if (cargeing == True and wh_neu == True):
             #session_energy_wh = 0
