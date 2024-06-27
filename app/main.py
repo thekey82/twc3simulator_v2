@@ -102,10 +102,10 @@ async def get_vitals():
     except ValueError as e:
         return {"error": str(e)}    
         
-    #try:
-        #if wh == 0.0:
-            #wh = total
-            #session_energy_wh = 0.00
+    try:
+        if wh == 0.0:
+            wh = total
+            session_energy_wh = 0.00
     #try:
         #if (cargeing == True and wh_neu == True):
             #session_energy_wh = 0
