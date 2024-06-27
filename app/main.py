@@ -8,6 +8,7 @@ app = FastAPI()
 shelly_ip = os.getenv('shelly_ip', '192.168.178.59')
 wh = float()
 wh_neu = bool()
+wh = 0
 # Define the data structure
 class Vitals(BaseModel):
     contactor_closed: bool
