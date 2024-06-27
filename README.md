@@ -41,7 +41,7 @@ Oder als Teil Ihres evcc, so dass Sie über Port 80 darauf zugreifen können.
       container_name: twc3simv2
       image: thekey82/twc3simulator_v2
       environment:
-        - "SHELLY_IP=192.168.178.205"
+        - "SHELLY_IP=192.168.178.59"
       restart: unless-stopped
       
 Vollständiges Beispiel im Beispielordner
