@@ -7,7 +7,7 @@ app = FastAPI()
 
 shelly_ip = os.getenv('shelly_ip', '192.168.178.59')
 wh = float()
-wh_neu = float()
+wh_neu = bool()
 # Define the data structure
 class Vitals(BaseModel):
     contactor_closed: bool
@@ -105,9 +105,15 @@ async def get_vitals():
     #try:
         #if wh == 0.0
              #wh = total
+             #session_energy_wh = 0.00
     #try:
-        #session_energy_wh = total - wh
         
+    #try:
+        #if charging == true
+            #session_energy_wh = total - wh
+            
+        #else:
+              #wh_neu = true
     vitals = Vitals(
         contactor_closed=charging,
         vehicle_connected=connected,
