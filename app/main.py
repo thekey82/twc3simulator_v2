@@ -91,20 +91,6 @@ async def get_vitals():
     except ValueError as e:
         return {"error": str(e)}    
         
-    #if wh == 0:
-       # wh = get_shelly_total(shelly_ip)
-       # session_energy_wh = 0.00
-    #try:
-        #if (cargeing == True and wh_neu == True):
-            #session_energy_wh = 0
-        
-    #try:
-        #if charging == True:
-            #session_energy_wh = total - wh
-            #wh_neu = False
-            
-        #else:
-            #wh_neu = True
     vitals = Vitals(
         contactor_closed=charging,
         vehicle_connected=connected,
@@ -128,7 +114,7 @@ async def get_vitals():
         prox_v=0.0,
         pilot_high_v=11.9,
         pilot_low_v=11.8,
-        session_energy_wh=total,
+        session_energy_wh=0.000,
         config_status=5,
         evse_state=1,
         current_alerts=[]
