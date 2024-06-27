@@ -58,7 +58,7 @@ def get_shelly_total(shelly_ip):
         data = response.json()
         return data["aenergy"]["total"]
    except requests.RequestException as e:
-        raise ValueError(f"Error fetching data from Shelly device: {e}")
+       raise ValueError(f"Error fetching data from Shelly device: {e}")
 
 def get_shelly_voltage(shelly_ip):
     url = f"http://{shelly_ip}/rpc/Shelly.GetStatus"
