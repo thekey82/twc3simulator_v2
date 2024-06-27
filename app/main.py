@@ -103,15 +103,15 @@ async def get_vitals():
         return {"error": str(e)}    
         
     try:
-        if wh == 0.0
+        if wh == 0.0:
              wh = total
              session_energy_wh = 0.00
     try:
-        if (cargeing == True and wh_neu == True)
+        if (cargeing == True and wh_neu == True):
             session_energy_wh = 0
         
     try:
-        if charging == True
+        if charging == True:
             session_energy_wh = total - wh
             wh_neu = False
             
