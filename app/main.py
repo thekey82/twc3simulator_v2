@@ -62,7 +62,10 @@ def get_shelly_total(shelly_ip):
         return data["switch:0"]["aenergy"]["total"]
     except requests.RequestException as e:
         raise ValueError(f"Error fetching data from Shelly device: {e}")
-
+        
+if session_energy_wh == 0.000:
+        wh = total
+    
 def get_shelly_voltage(shelly_ip):
     url = f"http://{shelly_ip}/rpc/Shelly.GetStatus"
     try:
