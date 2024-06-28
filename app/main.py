@@ -56,7 +56,7 @@ def get_shelly_total(shelly_ip):
         response = requests.get(url)
         response.raise_for_status()
         data = response.json()
-        return data["switch:0"]["total"]
+        return data["switch:0"]["aenergy"]["total"]
     except requests.RequestException as e:
         raise ValueError(f"Error fetching data from Shelly device: {e}")
 
