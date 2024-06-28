@@ -101,7 +101,7 @@ async def get_vitals():
         charging = False
         wh_neu = True
         session_energy_wh = 0.000
-        wh = total    
+        wh=total    
     else:
         charging = True
         session_energy_wh = total - wh
