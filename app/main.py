@@ -95,13 +95,12 @@ async def get_vitals():
     try:
         current = get_shelly_current(shelly_ip)
     except ValueError as e:
-        return {"error": str(e)}
-    if session_energy_wh == 0.000:
-        wh = total    
+        return {"error": str(e)}   
     if current <= 4.5:
         charging = False
         wh_neu = True
         session_energy_wh == 0.000
+        wh = total    
     else:
         charging = True
         session_energy_wh = total - wh
