@@ -7,7 +7,7 @@ app = FastAPI()
 wh_neu = False
 session_energy_wh = 0.000
 total = 0
-wh = total
+wh = 0
 shelly_ip = os.getenv('shelly_ip', '192.168.178.59')
 # Define the data structure
 class Vitals(BaseModel):
