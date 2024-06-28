@@ -4,11 +4,10 @@ import requests
 import os
 
 app = FastAPI()
-wh = 0
 wh_neu = False
 session_energy_wh = 0.000
 total = 0
-
+wh = total
 shelly_ip = os.getenv('shelly_ip', '192.168.178.59')
 # Define the data structure
 class Vitals(BaseModel):
