@@ -106,6 +106,7 @@ async def get_vitals():
         charging = True
         session_energy_wh = total - wh
         print(total)
+        print(wh)
     try:
         connected = get_shelly_connected(shelly_ip)
     except ValueError as e:
