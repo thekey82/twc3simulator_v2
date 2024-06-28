@@ -6,7 +6,7 @@ import os
 app = FastAPI()
 wh = 0
 wh_neu = False
-
+session_energy_wh=0.000
 
 shelly_ip = os.getenv('shelly_ip', '192.168.178.59')
 # Define the data structure
@@ -38,7 +38,7 @@ class Vitals(BaseModel):
     evse_state: int
     current_alerts: list
 
-    session_energy_wh=0.000
+    
     
 def get_shelly_current(shelly_ip):
     url = f"http://{shelly_ip}/rpc/Shelly.GetStatus"
