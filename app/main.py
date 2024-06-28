@@ -72,9 +72,6 @@ def get_shelly_voltage(shelly_ip):
         return data["switch:0"]["voltage"]
     except requests.RequestException as e:
         raise ValueError(f"Error fetching data from Shelly device: {e}")
-if session_energy_wh == 0.000:
-        wh = total
-        print(wh)
 def get_shelly_connected(shelly_ip):
     url = f"http://{shelly_ip}/rpc/Shelly.GetStatus"
     try:
@@ -99,9 +96,12 @@ async def get_vitals():
         current = get_shelly_current(shelly_ip)
     except ValueError as e:
         return {"error": str(e)}
+    if session_energy_wh == 0.000:
+        wh = total    
     if current <= 4.5:
         charging = False
         wh_neu = True
+        session_energy_wh == 0.000
     else:
         charging = True
         session_energy_wh = total - wh
