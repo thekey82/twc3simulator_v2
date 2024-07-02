@@ -37,7 +37,7 @@ Wobei SHELLY_IP die IP des Shelly-Geräts ist, von dem die aktuellen Information
 Oder als Teil Ihres evcc, so dass Sie über Port 80 darauf zugreifen können.
 
     services:
-    twc3sim:
+    twc3simv2:
       container_name: twc3simv2
       image: thekey82/twc3simulator_v2
       environment:
