@@ -4,10 +4,10 @@ import requests
 import os
 
 app = FastAPI()
-wh_neu = False
-session_energy_wh = 0.000
-total = 0
-wh = 0
+#wh_neu = False
+#session_energy_wh = 0.000
+#total = 0
+#wh = 0
 shelly_ip = os.getenv('shelly_ip', '192.168.178.59')
 # Define the data structure
 class Vitals(BaseModel):
@@ -99,13 +99,13 @@ async def get_vitals():
     if current <= 4.5:
         charging = False
         #wh_neu = True
-        wh = total
-        session_energy_wh = 0.000
+        #wh = total
+        #session_energy_wh = 0.000
     else:
         charging = True
-        session_energy_wh = total - wh
-        print(total)
-        print(wh)
+        #session_energy_wh = total - wh
+       # print(total)
+       # print(wh)
     try:
         connected = get_shelly_connected(shelly_ip)
     except ValueError as e:
@@ -138,7 +138,7 @@ async def get_vitals():
         prox_v=0.0,
         pilot_high_v=11.9,
         pilot_low_v=11.8,
-        session_energy_wh=session_energy_wh,
+        session_energy_wh=0.0000,
         config_status=5,
         evse_state=1,
         current_alerts=[]
